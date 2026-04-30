@@ -3,10 +3,10 @@
 **Course:** Data Warehousing and Visualisation  
 **Author:** Soelema Remenda Pieka  
 **University:** Università della Calabria  
-**Academic Year:** 2024/2025  
+**Academic Year:** 2025/2026  
 
 ## About
-ETL pipeline and data warehouse for road freight logistics operations.
+ETL pipeline and data warehouse for logistics operations.
 Built in Python using pandas. Visualised in Power BI.
 
 ## Data

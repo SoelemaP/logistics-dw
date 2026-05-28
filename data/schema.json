@@ -1,0 +1,726 @@
+{
+  "generated_at": "2026-05-28T19:47:17.498480",
+  "source": "notebook.ipynb \u2014 Section 4 Data Modeling",
+  "reconciled_db": {
+    "tables": [
+      "drivers",
+      "trucks",
+      "trailers",
+      "customers",
+      "facilities",
+      "routes",
+      "loads",
+      "trips",
+      "delivery_events",
+      "fuel_purchases"
+    ],
+    "location": "data/reconciled/"
+  },
+  "attribute_tree": {
+    "root": "trip_id",
+    "children": {
+      "trip_id": [
+        "load_id",
+        "driver_id",
+        "truck_id",
+        "trailer_id",
+        "customer_id",
+        "route_id",
+        "pickup_facility_id",
+        "delivery_facility_id",
+        "date_id"
+      ],
+      "load_id": [
+        "load_type",
+        "booking_type"
+      ],
+      "driver_id": [
+        "first_name",
+        "last_name",
+        "hire_date",
+        "termination_date",
+        "employment_status",
+        "years_experience"
+      ],
+      "truck_id": [
+        "make",
+        "model_year",
+        "status"
+      ],
+      "trailer_id": [
+        "trailer_type",
+        "model_year",
+        "status"
+      ],
+      "first_name": [],
+      "last_name": [],
+      "hire_date": [],
+      "termination_date": [],
+      "employment_status": [],
+      "years_experience": [],
+      "trailer_type": [],
+      "model_year": [],
+      "status": [],
+      "customer_id": [
+        "customer_name",
+        "customer_type",
+        "primary_freight_type",
+        "account_status"
+      ],
+      "route_id": [
+        "origin_city",
+        "destination_city",
+        "typical_distance_miles",
+        "base_rate_per_mile",
+        "fuel_surcharge_rate",
+        "typical_transit_days"
+      ],
+      "load_type": [],
+      "booking_type": [],
+      "customer_name": [],
+      "customer_type": [],
+      "primary_freight_type": [],
+      "account_status": [],
+      "origin_city": [
+        "origin_state"
+      ],
+      "origin_state": [
+        "origin_region"
+      ],
+      "destination_city": [
+        "destination_state"
+      ],
+      "destination_state": [
+        "destination_region"
+      ],
+      "typical_distance_miles": [],
+      "base_rate_per_mile": [],
+      "fuel_surcharge_rate": [],
+      "typical_transit_days": [],
+      "make": [],
+      "pickup_facility_id": [
+        "pickup_facility_name",
+        "pickup_facility_type",
+        "pickup_city",
+        "pickup_state",
+        "pickup_latitude",
+        "pickup_longitude"
+      ],
+      "delivery_facility_id": [
+        "delivery_facility_name",
+        "delivery_facility_type",
+        "delivery_city",
+        "delivery_state",
+        "delivery_latitude",
+        "delivery_longitude"
+      ],
+      "pickup_facility_name": [],
+      "delivery_facility_name": [],
+      "pickup_facility_type": [],
+      "delivery_facility_type": [],
+      "pickup_city": [],
+      "delivery_city": [],
+      "pickup_state": [],
+      "delivery_state": [],
+      "pickup_latitude": [],
+      "delivery_latitude": [],
+      "pickup_longitude": [],
+      "delivery_longitude": [],
+      "origin_region": [],
+      "destination_region": [],
+      "date_id": [
+        "date",
+        "day",
+        "weekday"
+      ],
+      "date": [],
+      "day": [
+        "month"
+      ],
+      "weekday": [],
+      "month": [
+        "quarter"
+      ],
+      "quarter": [
+        "year"
+      ],
+      "year": []
+    },
+    "measures": [
+      "actual_distance_miles",
+      "fuel_gallons_used",
+      "average_mpg",
+      "idle_time_hours",
+      "actual_duration_hours",
+      "fuel_gallons_purchased",
+      "fuel_purchased_cost",
+      "revenue",
+      "fuel_surcharge",
+      "accessorial_charges",
+      "weight_lbs",
+      "planned_pickup_time",
+      "actual_pickup_time",
+      "planned_delivery_time",
+      "actual_delivery_time",
+      "detention_minutes_pickup",
+      "detention_minutes_delivery",
+      "detention_minutes_total",
+      "planned_duration_hours",
+      "pickup_delay_hours",
+      "delivery_delay_hours",
+      "delay_hours",
+      "profit",
+      "profit_margin",
+      "fuel_spend_per_mile",
+      "on_time_flag",
+      "delay_category"
+    ],
+    "depth": 5,
+    "node_count": 54
+  },
+  "star_schema": {
+    "fact_table": {
+      "name": "fact_trips",
+      "grain": "one row per executed trip",
+      "measures": [
+        "actual_distance_miles",
+        "fuel_gallons_used",
+        "average_mpg",
+        "idle_time_hours",
+        "actual_duration_hours",
+        "fuel_gallons_purchased",
+        "fuel_purchased_cost",
+        "revenue",
+        "fuel_surcharge",
+        "accessorial_charges",
+        "weight_lbs",
+        "planned_pickup_time",
+        "actual_pickup_time",
+        "planned_delivery_time",
+        "actual_delivery_time",
+        "detention_minutes_pickup",
+        "detention_minutes_delivery",
+        "detention_minutes_total",
+        "planned_duration_hours",
+        "pickup_delay_hours",
+        "delivery_delay_hours",
+        "delay_hours",
+        "profit",
+        "profit_margin",
+        "fuel_spend_per_mile",
+        "on_time_flag",
+        "delay_category"
+      ],
+      "foreign_keys": [
+        "dim_loads",
+        "dim_drivers",
+        "dim_trucks",
+        "dim_trailer",
+        "dim_customer",
+        "dim_routes",
+        "dim_facilities",
+        "dim_date"
+      ]
+    },
+    "dimension_tables": {
+      "dim_loads": {
+        "surrogate_key": "dim_loads_sk",
+        "natural_key": "load_id",
+        "levels": [
+          "load_id",
+          "load_type",
+          "booking_type"
+        ],
+        "role_playing": false,
+        "description": "Hierarchy: load_id \u2192 load_type \u2192 booking_type"
+      },
+      "dim_drivers": {
+        "surrogate_key": "dim_drivers_sk",
+        "natural_key": "driver_id",
+        "levels": [
+          "driver_id",
+          "first_name",
+          "last_name",
+          "hire_date",
+          "termination_date",
+          "employment_status",
+          "years_experience"
+        ],
+        "role_playing": false,
+        "description": "Hierarchy: driver_id \u2192 first_name \u2192 last_name \u2192 hire_date \u2192 termination_date \u2192 employment_status \u2192 years_experience"
+      },
+      "dim_trucks": {
+        "surrogate_key": "dim_trucks_sk",
+        "natural_key": "truck_id",
+        "levels": [
+          "truck_id",
+          "make",
+          "model_year",
+          "status"
+        ],
+        "role_playing": false,
+        "description": "Hierarchy: truck_id \u2192 make \u2192 model_year \u2192 status"
+      },
+      "dim_trailer": {
+        "surrogate_key": "dim_trailer_sk",
+        "natural_key": "trailer_id",
+        "levels": [
+          "trailer_id",
+          "trailer_type",
+          "model_year",
+          "status"
+        ],
+        "role_playing": false,
+        "description": "Hierarchy: trailer_id \u2192 trailer_type \u2192 model_year \u2192 status"
+      },
+      "dim_customer": {
+        "surrogate_key": "dim_customer_sk",
+        "natural_key": "customer_id",
+        "levels": [
+          "customer_id",
+          "customer_name",
+          "customer_type",
+          "primary_freight_type",
+          "account_status"
+        ],
+        "role_playing": false,
+        "description": "Hierarchy: customer_id \u2192 customer_name \u2192 customer_type \u2192 primary_freight_type \u2192 account_status"
+      },
+      "dim_routes": {
+        "surrogate_key": "dim_routes_sk",
+        "natural_key": "route_id",
+        "levels": [
+          "route_id",
+          "origin_city",
+          "destination_city",
+          "typical_distance_miles",
+          "base_rate_per_mile",
+          "fuel_surcharge_rate",
+          "typical_transit_days",
+          "origin_state",
+          "destination_state",
+          "origin_region",
+          "destination_region"
+        ],
+        "role_playing": false,
+        "description": "Hierarchy: route_id \u2192 origin_city \u2192 destination_city \u2192 typical_distance_miles \u2192 base_rate_per_mile \u2192 fuel_surcharge_rate \u2192 typical_transit_days \u2192 origin_state \u2192 destination_state \u2192 origin_region \u2192 destination_region"
+      },
+      "dim_facilities": {
+        "surrogate_key": "dim_facilities_sk",
+        "natural_key": "pickup_facility_id",
+        "levels": [
+          "pickup_facility_id",
+          "pickup_facility_name",
+          "pickup_facility_type",
+          "pickup_city",
+          "pickup_state",
+          "pickup_latitude",
+          "pickup_longitude"
+        ],
+        "role_playing": true,
+        "description": "Hierarchy: pickup_facility_id \u2192 pickup_facility_name \u2192 pickup_facility_type \u2192 pickup_city \u2192 pickup_state \u2192 pickup_latitude \u2192 pickup_longitude"
+      },
+      "dim_date": {
+        "surrogate_key": "dim_date_sk",
+        "natural_key": "date_id",
+        "levels": [
+          "date_id",
+          "date",
+          "day",
+          "weekday",
+          "month",
+          "quarter",
+          "year"
+        ],
+        "role_playing": false,
+        "description": "Hierarchy: date_id \u2192 date \u2192 day \u2192 weekday \u2192 month \u2192 quarter \u2192 year"
+      }
+    }
+  },
+  "measure_additivity": {
+    "actual_distance_miles": "additive",
+    "fuel_gallons_used": "additive",
+    "idle_time_hours": "additive",
+    "actual_duration_hours": "additive",
+    "fuel_gallons_purchased": "additive",
+    "fuel_purchased_cost": "additive",
+    "revenue": "additive",
+    "fuel_surcharge": "additive",
+    "accessorial_charges": "additive",
+    "detention_minutes_pickup": "additive",
+    "detention_minutes_delivery": "additive",
+    "detention_minutes_total": "additive",
+    "profit": "additive",
+    "delay_hours": "additive",
+    "pickup_delay_hours": "additive",
+    "delivery_delay_hours": "additive",
+    "planned_duration_hours": "additive",
+    "planned_pickup_time": "non_additive",
+    "actual_pickup_time": "non_additive",
+    "planned_delivery_time": "non_additive",
+    "actual_delivery_time": "non_additive",
+    "average_mpg": "non_additive",
+    "profit_margin": "non_additive",
+    "fuel_spend_per_mile": "non_additive",
+    "weight_lbs": "non_additive",
+    "on_time_flag": "non_additive",
+    "delay_category": "non_additive"
+  },
+  "region_mapping": {
+    "TX": "South",
+    "TN": "South",
+    "NC": "South",
+    "GA": "South",
+    "FL": "South",
+    "CA": "West",
+    "AZ": "West",
+    "NV": "West",
+    "CO": "West",
+    "OR": "West",
+    "WA": "West",
+    "NY": "Northeast",
+    "PA": "Northeast",
+    "OH": "Midwest",
+    "IL": "Midwest",
+    "MI": "Midwest",
+    "MN": "Midwest",
+    "MO": "Midwest",
+    "IN": "Midwest"
+  },
+  "glossary": [
+    {
+      "measure": "actual_distance_miles",
+      "definition": "Miles driven on the trip",
+      "unit": "miles",
+      "computation": "trips.actual_distance_miles (raw)",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "fuel_gallons_used",
+      "definition": "Fuel consumed by the engine during the trip",
+      "unit": "gallons",
+      "computation": "trips.fuel_gallons_used (raw)",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "average_mpg",
+      "definition": "Fuel efficiency for the trip",
+      "unit": "mpg",
+      "computation": "trips.average_mpg (raw) \u2014 recompute as SUM(miles)/SUM(gallons)",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "idle_time_hours",
+      "definition": "Hours the engine was running while stationary",
+      "unit": "hours",
+      "computation": "trips.idle_time_hours (raw)",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "actual_duration_hours",
+      "definition": "Total hours from actual pickup to actual delivery",
+      "unit": "hours",
+      "computation": "trips.actual_duration_hours (raw)",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "fuel_gallons_purchased",
+      "definition": "Total gallons purchased at fuel stops during the trip",
+      "unit": "gallons",
+      "computation": "SUM(fuel_purchases.gallons) per trip_id",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "fuel_purchased_cost",
+      "definition": "Total amount spent on fuel purchases during the trip",
+      "unit": "USD",
+      "computation": "SUM(fuel_purchases.total_cost) per trip_id",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "revenue",
+      "definition": "Total amount billed to the customer for the load",
+      "unit": "USD",
+      "computation": "loads.revenue (raw)",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "fuel_surcharge",
+      "definition": "Fuel surcharge applied to the load",
+      "unit": "USD",
+      "computation": "loads.fuel_surcharge (raw)",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "accessorial_charges",
+      "definition": "Additional charges beyond the base rate",
+      "unit": "USD",
+      "computation": "loads.accessorial_charges (raw)",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "weight_lbs",
+      "definition": "Weight of the freight carried on the trip",
+      "unit": "lbs",
+      "computation": "loads.weight_lbs (raw)",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "planned_pickup_time",
+      "definition": "Scheduled pickup datetime",
+      "unit": "datetime",
+      "computation": "delivery_events.scheduled_datetime where event_type=Pickup",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "actual_pickup_time",
+      "definition": "Actual pickup datetime",
+      "unit": "datetime",
+      "computation": "delivery_events.actual_datetime where event_type=Pickup",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "planned_delivery_time",
+      "definition": "Scheduled delivery datetime",
+      "unit": "datetime",
+      "computation": "delivery_events.scheduled_datetime where event_type=Delivery",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "actual_delivery_time",
+      "definition": "Actual delivery datetime",
+      "unit": "datetime",
+      "computation": "delivery_events.actual_datetime where event_type=Delivery",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "detention_minutes_pickup",
+      "definition": "Minutes of detention at the pickup facility",
+      "unit": "minutes",
+      "computation": "delivery_events.detention_minutes where event_type=Pickup",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "detention_minutes_delivery",
+      "definition": "Minutes of detention at the delivery facility",
+      "unit": "minutes",
+      "computation": "delivery_events.detention_minutes where event_type=Delivery",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "detention_minutes_total",
+      "definition": "Sum of pickup and delivery detention minutes",
+      "unit": "minutes",
+      "computation": "detention_minutes_pickup + detention_minutes_delivery",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "planned_duration_hours",
+      "definition": "Planned hours from scheduled pickup to scheduled delivery",
+      "unit": "hours",
+      "computation": "planned_delivery_time - planned_pickup_time",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "pickup_delay_hours",
+      "definition": "Hours between actual and planned pickup time",
+      "unit": "hours",
+      "computation": "actual_pickup_time - planned_pickup_time",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "delivery_delay_hours",
+      "definition": "Hours between actual and planned delivery time",
+      "unit": "hours",
+      "computation": "actual_delivery_time - planned_delivery_time",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "delay_hours",
+      "definition": "Difference between actual and planned trip duration",
+      "unit": "hours",
+      "computation": "actual_duration_hours - planned_duration_hours",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "profit",
+      "definition": "Revenue minus fuel purchased cost",
+      "unit": "USD",
+      "computation": "revenue - fuel_purchased_cost",
+      "additivity": "additive",
+      "valid_aggregations": [
+        "SUM",
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "profit_margin",
+      "definition": "Profit as a proportion of revenue",
+      "unit": "ratio",
+      "computation": "profit / revenue \u2014 recompute as SUM(profit)/SUM(revenue)",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "fuel_spend_per_mile",
+      "definition": "Fuel purchased cost per mile driven",
+      "unit": "USD/mile",
+      "computation": "fuel_purchased_cost / actual_distance_miles",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "AVG",
+        "MIN",
+        "MAX"
+      ]
+    },
+    {
+      "measure": "on_time_flag",
+      "definition": "1 if delivery delay is zero or negative, else 0",
+      "unit": "boolean",
+      "computation": "1 if delivery_delay_hours <= 0 else 0",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "AVG"
+      ]
+    },
+    {
+      "measure": "delay_category",
+      "definition": "Categorical classification of trip delay",
+      "unit": "category",
+      "computation": "early if delay < -0.5, on-time if -0.5 to 0.5, late if > 0.5",
+      "additivity": "non_additive",
+      "valid_aggregations": [
+        "COUNT",
+        "MODE"
+      ]
+    }
+  ]
+}

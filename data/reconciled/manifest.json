@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-05-28T14:32:13.394753",
+  "tables": {
+    "drivers": {
+      "rows": 150,
+      "primary_key": "driver_id",
+      "foreign_keys": {},
+      "layer": "reference",
+      "columns": [
+        "driver_id",
+        "first_name",
+        "last_name",
+        "hire_date",
+        "termination_date",
+        "license_number",
+        "license_state",
+        "date_of_birth",
+        "home_terminal",
+        "employment_status",
+        "cdl_class",
+        "years_experience"
+      ]
+    },
+    "trucks": {
+      "rows": 120,
+      "primary_key": "truck_id",
+      "foreign_keys": {},
+      "layer": "reference",
+      "columns": [
+        "truck_id",
+        "unit_number",
+        "make",
+        "model_year",
+        "vin",
+        "acquisition_date",
+        "acquisition_mileage",
+        "fuel_type",
+        "tank_capacity_gallons",
+        "status",
+        "home_terminal"
+      ]
+    },
+    "trailers": {
+      "rows": 180,
+      "primary_key": "trailer_id",
+      "foreign_keys": {},
+      "layer": "reference",
+      "columns": [
+        "trailer_id",
+        "trailer_number",
+        "trailer_type",
+        "length_feet",
+        "model_year",
+        "vin",
+        "acquisition_date",
+        "status",
+        "current_location"
+      ]
+    },
+    "customers": {
+      "rows": 200,
+      "primary_key": "customer_id",
+      "foreign_keys": {},
+      "layer": "reference",
+      "columns": [
+        "customer_id",
+        "customer_name",
+        "customer_type",
+        "credit_terms_days",
+        "primary_freight_type",
+        "account_status",
+        "contract_start_date",
+        "annual_revenue_potential"
+      ]
+    },
+    "facilities": {
+      "rows": 50,
+      "primary_key": "facility_id",
+      "foreign_keys": {},
+      "layer": "reference",
+      "columns": [
+        "facility_id",
+        "facility_name",
+        "facility_type",
+        "city",
+        "state",
+        "latitude",
+        "longitude",
+        "dock_doors",
+        "operating_hours"
+      ]
+    },
+    "routes": {
+      "rows": 58,
+      "primary_key": "route_id",
+      "foreign_keys": {},
+      "layer": "reference",
+      "columns": [
+        "route_id",
+        "origin_city",
+        "origin_state",
+        "destination_city",
+        "destination_state",
+        "typical_distance_miles",
+        "base_rate_per_mile",
+        "fuel_surcharge_rate",
+        "typical_transit_days"
+      ]
+    },
+    "loads": {
+      "rows": 85410,
+      "primary_key": "load_id",
+      "foreign_keys": {
+        "customer_id": "customers",
+        "route_id": "routes"
+      },
+      "layer": "planning",
+      "columns": [
+        "load_id",
+        "customer_id",
+        "route_id",
+        "load_date",
+        "load_type",
+        "weight_lbs",
+        "pieces",
+        "revenue",
+        "fuel_surcharge",
+        "accessorial_charges",
+        "load_status",
+        "booking_type"
+      ]
+    },
+    "trips": {
+      "rows": 85410,
+      "primary_key": "trip_id",
+      "foreign_keys": {
+        "load_id": "loads",
+        "driver_id": "drivers",
+        "truck_id": "trucks",
+        "trailer_id": "trailers"
+      },
+      "layer": "execution",
+      "columns": [
+        "trip_id",
+        "load_id",
+        "driver_id",
+        "truck_id",
+        "trailer_id",
+        "dispatch_date",
+        "actual_distance_miles",
+        "actual_duration_hours",
+        "fuel_gallons_used",
+        "average_mpg",
+        "idle_time_hours",
+        "trip_status"
+      ]
+    },
+    "delivery_events": {
+      "rows": 170820,
+      "primary_key": "event_id",
+      "foreign_keys": {
+        "trip_id": "trips",
+        "facility_id": "facilities"
+      },
+      "layer": "execution",
+      "columns": [
+        "event_id",
+        "load_id",
+        "trip_id",
+        "event_type",
+        "facility_id",
+        "scheduled_datetime",
+        "actual_datetime",
+        "detention_minutes",
+        "on_time_flag",
+        "location_city",
+        "location_state"
+      ]
+    },
+    "fuel_purchases": {
+      "rows": 196442,
+      "primary_key": "fuel_purchase_id",
+      "foreign_keys": {
+        "trip_id": "trips",
+        "truck_id": "trucks",
+        "driver_id": "drivers"
+      },
+      "layer": "execution",
+      "columns": [
+        "fuel_purchase_id",
+        "trip_id",
+        "truck_id",
+        "driver_id",
+        "purchase_date",
+        "location_city",
+        "location_state",
+        "gallons",
+        "price_per_gallon",
+        "total_cost",
+        "fuel_card_number"
+      ]
+    }
+  }
+}

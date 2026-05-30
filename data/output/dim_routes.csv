@@ -1,0 +1,59 @@
+dim_routes_sk,route_id,origin_city,origin_state,origin_region,destination_city,destination_state,destination_region,typical_distance_miles,typical_transit_days,base_rate_per_mile,fuel_surcharge_rate,etl_loaded_at
+1,RTE00001,Atlanta,GA,South,Chicago,IL,Midwest,677,1,1.7,0.19,2026-05-30T08:34:13
+2,RTE00002,Atlanta,GA,South,Miami,FL,South,697,1,2.08,0.22,2026-05-30T08:34:13
+3,RTE00003,Chicago,IL,Midwest,Los Angeles,CA,West,2003,3,2.55,0.29,2026-05-30T08:34:13
+4,RTE00004,Chicago,IL,Midwest,Portland,OR,West,2017,3,1.84,0.19,2026-05-30T08:34:13
+5,RTE00005,Chicago,IL,Midwest,Las Vegas,NV,West,1749,3,2.41,0.26,2026-05-30T08:34:13
+6,RTE00006,Chicago,IL,Midwest,Charlotte,NC,South,675,1,2.13,0.28,2026-05-30T08:34:13
+7,RTE00007,Dallas,TX,South,New York,NY,Northeast,1576,2,2.54,0.32,2026-05-30T08:34:13
+8,RTE00008,Dallas,TX,South,Denver,CO,West,762,1,2.62,0.15,2026-05-30T08:34:13
+9,RTE00009,Dallas,TX,South,Indianapolis,IN,Midwest,878,1,1.95,0.17,2026-05-30T08:34:13
+10,RTE00010,New York,NY,Northeast,Philadelphia,PA,Northeast,92,1,1.61,0.17,2026-05-30T08:34:13
+11,RTE00011,New York,NY,Northeast,Columbus,OH,Midwest,547,1,1.69,0.24,2026-05-30T08:34:13
+12,RTE00012,Phoenix,AZ,West,Philadelphia,PA,Northeast,2389,4,2.71,0.19,2026-05-30T08:34:13
+13,RTE00013,Phoenix,AZ,West,Denver,CO,West,673,1,1.7,0.21,2026-05-30T08:34:13
+14,RTE00014,Phoenix,AZ,West,Kansas City,MO,Midwest,1204,2,2.14,0.19,2026-05-30T08:34:13
+15,RTE00015,Philadelphia,PA,Northeast,New York,NY,Northeast,92,1,2.79,0.15,2026-05-30T08:34:13
+16,RTE00016,Philadelphia,PA,Northeast,Seattle,WA,West,2729,4,2.5,0.17,2026-05-30T08:34:13
+17,RTE00017,Philadelphia,PA,Northeast,Minneapolis,MN,Midwest,1130,1,1.81,0.34,2026-05-30T08:34:13
+18,RTE00018,Philadelphia,PA,Northeast,Indianapolis,IN,Midwest,670,1,2.07,0.28,2026-05-30T08:34:13
+19,RTE00019,Houston,TX,South,Detroit,MI,Midwest,1271,2,2.33,0.32,2026-05-30T08:34:13
+20,RTE00020,Houston,TX,South,Seattle,WA,West,2172,3,1.77,0.34,2026-05-30T08:34:13
+21,RTE00021,Houston,TX,South,Portland,OR,West,2108,3,2.45,0.28,2026-05-30T08:34:13
+22,RTE00022,Houston,TX,South,Memphis,TN,South,557,1,1.95,0.29,2026-05-30T08:34:13
+23,RTE00023,Miami,FL,South,Dallas,TX,South,1276,2,2.33,0.17,2026-05-30T08:34:13
+24,RTE00024,Miami,FL,South,Philadelphia,PA,Northeast,1175,2,2.48,0.32,2026-05-30T08:34:13
+25,RTE00025,Miami,FL,South,Seattle,WA,West,3141,5,1.65,0.18,2026-05-30T08:34:13
+26,RTE00026,Miami,FL,South,Denver,CO,West,1984,3,1.72,0.28,2026-05-30T08:34:13
+27,RTE00027,Detroit,MI,Midwest,Houston,TX,South,1271,2,2.02,0.33,2026-05-30T08:34:13
+28,RTE00028,Seattle,WA,West,Houston,TX,South,2172,3,1.89,0.26,2026-05-30T08:34:13
+29,RTE00029,Seattle,WA,West,Charlotte,NC,South,2623,4,2.47,0.34,2026-05-30T08:34:13
+30,RTE00030,Seattle,WA,West,Indianapolis,IN,Midwest,2147,3,2.48,0.33,2026-05-30T08:34:13
+31,RTE00031,Denver,CO,West,Kansas City,MO,Midwest,640,1,2.19,0.29,2026-05-30T08:34:13
+32,RTE00032,Portland,OR,West,Detroit,MI,Midwest,2259,3,1.99,0.2,2026-05-30T08:34:13
+33,RTE00033,Portland,OR,West,Seattle,WA,West,167,1,2.42,0.24,2026-05-30T08:34:13
+34,RTE00034,Portland,OR,West,Columbus,OH,Midwest,2332,4,2.12,0.34,2026-05-30T08:34:13
+35,RTE00035,Las Vegas,NV,West,Dallas,TX,South,1229,2,1.69,0.28,2026-05-30T08:34:13
+36,RTE00036,Las Vegas,NV,West,Los Angeles,CA,West,262,1,2.63,0.33,2026-05-30T08:34:13
+37,RTE00037,Las Vegas,NV,West,New York,NY,Northeast,2561,4,1.52,0.21,2026-05-30T08:34:13
+38,RTE00038,Las Vegas,NV,West,Kansas City,MO,Midwest,1311,2,2.71,0.24,2026-05-30T08:34:13
+39,RTE00039,Minneapolis,MN,Midwest,Atlanta,GA,South,1044,1,2.08,0.33,2026-05-30T08:34:13
+40,RTE00040,Minneapolis,MN,Midwest,Los Angeles,CA,West,1749,3,2.38,0.3,2026-05-30T08:34:13
+41,RTE00041,Minneapolis,MN,Midwest,Houston,TX,South,1216,2,2.75,0.21,2026-05-30T08:34:13
+42,RTE00042,Charlotte,NC,South,Seattle,WA,West,2623,4,2.39,0.18,2026-05-30T08:34:13
+43,RTE00043,Charlotte,NC,South,Denver,CO,West,1559,2,1.55,0.16,2026-05-30T08:34:13
+44,RTE00044,Charlotte,NC,South,Portland,OR,West,2627,4,2.69,0.31,2026-05-30T08:34:13
+45,RTE00045,Charlotte,NC,South,Memphis,TN,South,597,1,2.33,0.23,2026-05-30T08:34:13
+46,RTE00046,Columbus,OH,Midwest,Los Angeles,CA,West,2269,3,2.74,0.22,2026-05-30T08:34:13
+47,RTE00047,Columbus,OH,Midwest,Philadelphia,PA,Northeast,476,1,2.06,0.16,2026-05-30T08:34:13
+48,RTE00048,Columbus,OH,Midwest,Portland,OR,West,2332,4,2.69,0.34,2026-05-30T08:34:13
+49,RTE00049,Columbus,OH,Midwest,Minneapolis,MN,Midwest,720,1,2.62,0.2,2026-05-30T08:34:13
+50,RTE00050,Columbus,OH,Midwest,Kansas City,MO,Midwest,712,1,1.94,0.24,2026-05-30T08:34:13
+51,RTE00051,Memphis,TN,South,Los Angeles,CA,West,1840,3,1.85,0.25,2026-05-30T08:34:13
+52,RTE00052,Memphis,TN,South,Minneapolis,MN,Midwest,804,1,1.63,0.34,2026-05-30T08:34:13
+53,RTE00053,Kansas City,MO,Midwest,Atlanta,GA,South,777,1,2.35,0.27,2026-05-30T08:34:13
+54,RTE00054,Kansas City,MO,Midwest,Los Angeles,CA,West,1557,2,2.01,0.19,2026-05-30T08:34:13
+55,RTE00055,Kansas City,MO,Midwest,Miami,FL,South,1429,2,2.51,0.25,2026-05-30T08:34:13
+56,RTE00056,Kansas City,MO,Midwest,Portland,OR,West,1718,2,2.47,0.18,2026-05-30T08:34:13
+57,RTE00057,Kansas City,MO,Midwest,Charlotte,NC,South,921,1,2.45,0.3,2026-05-30T08:34:13
+58,RTE00058,Kansas City,MO,Midwest,Indianapolis,IN,Midwest,519,1,2.27,0.19,2026-05-30T08:34:13

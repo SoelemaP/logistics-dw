@@ -1,0 +1,152 @@
+dim_drivers_sk,driver_id,first_name,last_name,hire_date,termination_date,home_terminal,employment_status,years_experience,etl_loaded_at
+1,DRV00001,Jennifer,Hernandez,2014-10-31,,Denver,Active,3,2026-05-30T08:34:13
+2,DRV00002,William,Martin,2020-10-02,,Columbus,Active,20,2026-05-30T08:34:13
+3,DRV00003,Charles,Hernandez,2021-09-21,,Salt Lake City,Active,19,2026-05-30T08:34:13
+4,DRV00004,Barbara,Brown,2013-09-08,,Denver,Active,19,2026-05-30T08:34:13
+5,DRV00005,Mary,Martinez,2018-12-02,,Chicago,Active,12,2026-05-30T08:34:13
+6,DRV00006,Robert,Taylor,2019-04-04,,Portland,Active,23,2026-05-30T08:34:13
+7,DRV00007,James,Martinez,2019-07-02,2021-05-17,Miami,Terminated,5,2026-05-30T08:34:13
+8,DRV00008,Barbara,Wilson,2020-06-09,2021-01-23,Philadelphia,Terminated,15,2026-05-30T08:34:13
+9,DRV00009,Karen,Hernandez,2013-09-29,,Los Angeles,Active,13,2026-05-30T08:34:13
+10,DRV00010,Sarah,Gonzalez,2020-11-08,,Minneapolis,Active,23,2026-05-30T08:34:13
+11,DRV00011,Michael,Martinez,2014-06-01,,Dallas,Active,15,2026-05-30T08:34:13
+12,DRV00012,Robert,Moore,2013-09-12,,Nashville,Active,25,2026-05-30T08:34:13
+13,DRV00013,Jessica,Jones,2015-11-21,,Philadelphia,Active,3,2026-05-30T08:34:13
+14,DRV00014,Richard,Miller,2021-01-10,,Salt Lake City,Active,11,2026-05-30T08:34:13
+15,DRV00015,Susan,Wilson,2015-05-20,,Salt Lake City,Active,21,2026-05-30T08:34:13
+16,DRV00016,Thomas,Gonzalez,2017-04-09,,Kansas City,Active,11,2026-05-30T08:34:13
+17,DRV00017,William,Garcia,2021-08-24,,Atlanta,Active,13,2026-05-30T08:34:13
+18,DRV00018,Patricia,Martin,2021-09-01,,Chicago,Active,5,2026-05-30T08:34:13
+19,DRV00019,Robert,Jackson,2020-12-14,,Seattle,Active,20,2026-05-30T08:34:13
+20,DRV00020,Joseph,Martinez,2019-07-21,,Houston,Active,18,2026-05-30T08:34:13
+21,DRV00021,Patricia,Gonzalez,2019-05-25,2021-05-23,New York,Terminated,8,2026-05-30T08:34:13
+22,DRV00022,Charles,Moore,2016-05-03,,Memphis,Active,6,2026-05-30T08:34:13
+23,DRV00023,David,Smith,2015-04-03,,Philadelphia,Active,23,2026-05-30T08:34:13
+24,DRV00024,Barbara,Martinez,2021-09-15,,Dallas,Active,17,2026-05-30T08:34:13
+25,DRV00025,Jessica,Martinez,2015-09-17,,Omaha,Active,9,2026-05-30T08:34:13
+26,DRV00026,Charles,Miller,2019-10-10,,Columbus,Active,5,2026-05-30T08:34:13
+27,DRV00027,Karen,Wilson,2013-12-22,2015-03-16,Philadelphia,Terminated,13,2026-05-30T08:34:13
+28,DRV00028,Susan,Jackson,2014-09-19,,Memphis,Active,19,2026-05-30T08:34:13
+29,DRV00029,James,Martin,2014-02-20,,Philadelphia,Active,13,2026-05-30T08:34:13
+30,DRV00030,Jessica,Hernandez,2015-11-22,,Houston,Active,5,2026-05-30T08:34:13
+31,DRV00031,Charles,Anderson,2017-04-19,2019-07-18,Seattle,Terminated,10,2026-05-30T08:34:13
+32,DRV00032,Michael,Anderson,2019-07-14,,Omaha,Active,20,2026-05-30T08:34:13
+33,DRV00033,William,Anderson,2016-12-19,,New York,Active,9,2026-05-30T08:34:13
+34,DRV00034,Thomas,Miller,2015-05-25,,Kansas City,Active,15,2026-05-30T08:34:13
+35,DRV00035,Michael,Taylor,2018-11-19,,Atlanta,Active,19,2026-05-30T08:34:13
+36,DRV00036,Michael,Thomas,2012-12-04,,Miami,Active,21,2026-05-30T08:34:13
+37,DRV00037,Jessica,Garcia,2012-04-03,,New York,Active,21,2026-05-30T08:34:13
+38,DRV00038,William,Williams,2021-12-06,,New York,Active,23,2026-05-30T08:34:13
+39,DRV00039,Thomas,Martinez,2013-06-29,,Columbus,Active,22,2026-05-30T08:34:13
+40,DRV00040,Charles,Taylor,2012-12-19,2014-05-14,Miami,Terminated,19,2026-05-30T08:34:13
+41,DRV00041,Karen,Martin,2020-03-19,,Phoenix,Active,2,2026-05-30T08:34:13
+42,DRV00042,Richard,Hernandez,2014-03-05,2015-09-07,Los Angeles,Terminated,21,2026-05-30T08:34:13
+43,DRV00043,Mary,Williams,2017-04-06,,Nashville,Active,23,2026-05-30T08:34:13
+44,DRV00044,Richard,Davis,2018-03-10,,Atlanta,Active,24,2026-05-30T08:34:13
+45,DRV00045,Thomas,Martinez,2018-11-20,,New York,Active,10,2026-05-30T08:34:13
+46,DRV00046,Susan,Davis,2020-04-05,2022-05-05,Atlanta,Terminated,2,2026-05-30T08:34:13
+47,DRV00047,Elizabeth,Miller,2019-08-04,,Denver,Active,7,2026-05-30T08:34:13
+48,DRV00048,Thomas,Jones,2013-06-10,2015-04-18,Houston,Terminated,10,2026-05-30T08:34:13
+49,DRV00049,John,Smith,2018-03-25,,Memphis,Active,24,2026-05-30T08:34:13
+50,DRV00050,Robert,Johnson,2020-11-09,,Seattle,Active,11,2026-05-30T08:34:13
+51,DRV00051,Linda,Davis,2020-12-18,,Atlanta,Active,12,2026-05-30T08:34:13
+52,DRV00052,Thomas,Thomas,2017-09-28,2020-01-31,Phoenix,Terminated,13,2026-05-30T08:34:13
+53,DRV00053,John,Martin,2020-12-01,,Miami,Active,2,2026-05-30T08:34:13
+54,DRV00054,James,Williams,2017-12-23,,Chicago,Active,7,2026-05-30T08:34:13
+55,DRV00055,Mary,Anderson,2012-07-01,,New York,Active,6,2026-05-30T08:34:13
+56,DRV00056,William,Wilson,2018-02-23,,Oklahoma City,Active,20,2026-05-30T08:34:13
+57,DRV00057,Thomas,Jackson,2015-03-27,,Las Vegas,Active,23,2026-05-30T08:34:13
+58,DRV00058,David,Miller,2019-01-14,,Indianapolis,Active,14,2026-05-30T08:34:13
+59,DRV00059,Barbara,Gonzalez,2012-12-14,,Los Angeles,Active,4,2026-05-30T08:34:13
+60,DRV00060,Jessica,Thomas,2021-07-08,,Oklahoma City,Active,6,2026-05-30T08:34:13
+61,DRV00061,Linda,Gonzalez,2013-10-27,,Dallas,Active,25,2026-05-30T08:34:13
+62,DRV00062,Jessica,Davis,2016-11-07,,Charlotte,Active,22,2026-05-30T08:34:13
+63,DRV00063,James,Jones,2015-12-28,,Minneapolis,Active,2,2026-05-30T08:34:13
+64,DRV00064,Michael,Smith,2020-08-08,,Omaha,Active,4,2026-05-30T08:34:13
+65,DRV00065,Robert,Brown,2017-10-04,,Denver,Active,25,2026-05-30T08:34:13
+66,DRV00066,William,Wilson,2021-02-13,,Indianapolis,Active,18,2026-05-30T08:34:13
+67,DRV00067,Jessica,Davis,2015-10-24,2016-12-07,Memphis,Terminated,8,2026-05-30T08:34:13
+68,DRV00068,John,Garcia,2018-09-19,2019-04-08,Los Angeles,Terminated,14,2026-05-30T08:34:13
+69,DRV00069,Patricia,Taylor,2012-09-13,,Minneapolis,Active,15,2026-05-30T08:34:13
+70,DRV00070,Sarah,Anderson,2014-12-15,,Indianapolis,Active,16,2026-05-30T08:34:13
+71,DRV00071,Jessica,Johnson,2015-01-25,,Houston,Active,12,2026-05-30T08:34:13
+72,DRV00072,William,Moore,2012-01-28,2014-05-03,Kansas City,Terminated,7,2026-05-30T08:34:13
+73,DRV00073,Linda,Davis,2012-05-04,2013-01-08,Chicago,Terminated,13,2026-05-30T08:34:13
+74,DRV00074,William,Brown,2017-12-12,,Oklahoma City,Active,11,2026-05-30T08:34:13
+75,DRV00075,John,Anderson,2015-07-13,,Nashville,Active,25,2026-05-30T08:34:13
+76,DRV00076,Charles,Jones,2019-11-06,2021-01-02,Indianapolis,Terminated,12,2026-05-30T08:34:13
+77,DRV00077,Patricia,Anderson,2014-02-07,,Detroit,Active,20,2026-05-30T08:34:13
+78,DRV00078,John,Taylor,2021-03-23,,Minneapolis,Active,21,2026-05-30T08:34:13
+79,DRV00079,Patricia,Moore,2021-06-28,,Salt Lake City,Active,4,2026-05-30T08:34:13
+80,DRV00080,Richard,Martin,2014-08-03,,Atlanta,Active,3,2026-05-30T08:34:13
+81,DRV00081,Joseph,Hernandez,2019-06-13,,Chicago,Active,6,2026-05-30T08:34:13
+82,DRV00082,Michael,Anderson,2013-05-02,,Charlotte,Active,7,2026-05-30T08:34:13
+83,DRV00083,Patricia,Martin,2018-10-04,,Portland,Active,21,2026-05-30T08:34:13
+84,DRV00084,Jessica,Taylor,2021-02-09,,Las Vegas,Active,3,2026-05-30T08:34:13
+85,DRV00085,Linda,Wilson,2012-05-30,,Nashville,Active,23,2026-05-30T08:34:13
+86,DRV00086,Karen,Moore,2019-05-24,2021-09-24,Los Angeles,Terminated,4,2026-05-30T08:34:13
+87,DRV00087,William,Anderson,2012-04-14,,Charlotte,Active,10,2026-05-30T08:34:13
+88,DRV00088,Joseph,Garcia,2020-11-14,,Milwaukee,Active,16,2026-05-30T08:34:13
+89,DRV00089,David,Thomas,2017-09-28,,Minneapolis,Active,23,2026-05-30T08:34:13
+90,DRV00090,David,Anderson,2018-11-20,,Dallas,Active,15,2026-05-30T08:34:13
+91,DRV00091,Linda,Rodriguez,2016-12-01,,Dallas,Active,17,2026-05-30T08:34:13
+92,DRV00092,James,Davis,2014-11-16,,Seattle,Active,21,2026-05-30T08:34:13
+93,DRV00093,David,Rodriguez,2012-08-25,2014-04-09,Kansas City,Terminated,16,2026-05-30T08:34:13
+94,DRV00094,Mary,Taylor,2017-11-29,,New York,Active,15,2026-05-30T08:34:13
+95,DRV00095,Linda,Thomas,2020-03-06,,Dallas,Active,10,2026-05-30T08:34:13
+96,DRV00096,Joseph,Davis,2017-11-07,2018-11-18,New York,Terminated,8,2026-05-30T08:34:13
+97,DRV00097,Thomas,Rodriguez,2018-01-07,,Miami,Active,18,2026-05-30T08:34:13
+98,DRV00098,David,Anderson,2019-08-27,,Kansas City,Active,5,2026-05-30T08:34:13
+99,DRV00099,Michael,Williams,2014-06-27,,Salt Lake City,Active,13,2026-05-30T08:34:13
+100,DRV00100,Jennifer,Martinez,2019-01-04,,Memphis,Active,15,2026-05-30T08:34:13
+101,DRV00101,John,Davis,2014-02-18,,Columbus,Active,5,2026-05-30T08:34:13
+102,DRV00102,Elizabeth,Rodriguez,2014-05-04,,Milwaukee,Active,11,2026-05-30T08:34:13
+103,DRV00103,Joseph,Hernandez,2014-09-26,,Seattle,Active,23,2026-05-30T08:34:13
+104,DRV00104,Richard,Hernandez,2021-03-15,,Portland,Active,23,2026-05-30T08:34:13
+105,DRV00105,Barbara,Moore,2015-03-04,,Kansas City,Active,20,2026-05-30T08:34:13
+106,DRV00106,Patricia,Williams,2014-11-19,2016-11-21,Indianapolis,Terminated,17,2026-05-30T08:34:13
+107,DRV00107,Charles,Jones,2020-02-01,,Detroit,Active,18,2026-05-30T08:34:13
+108,DRV00108,Joseph,Jones,2016-01-06,,Minneapolis,Active,23,2026-05-30T08:34:13
+109,DRV00109,Joseph,Davis,2013-10-29,,Indianapolis,Active,11,2026-05-30T08:34:13
+110,DRV00110,James,Gonzalez,2019-04-05,,Kansas City,Active,3,2026-05-30T08:34:13
+111,DRV00111,Richard,Jones,2020-03-03,,Las Vegas,Active,9,2026-05-30T08:34:13
+112,DRV00112,Jennifer,Miller,2016-10-26,,Los Angeles,Active,14,2026-05-30T08:34:13
+113,DRV00113,Mary,Williams,2017-09-30,,Milwaukee,Active,21,2026-05-30T08:34:13
+114,DRV00114,Thomas,Wilson,2018-12-23,,Los Angeles,Active,3,2026-05-30T08:34:13
+115,DRV00115,Robert,Wilson,2014-10-29,2016-05-19,Salt Lake City,Terminated,2,2026-05-30T08:34:13
+116,DRV00116,Thomas,Hernandez,2014-04-15,2015-11-15,Salt Lake City,Terminated,8,2026-05-30T08:34:13
+117,DRV00117,Patricia,Moore,2015-10-04,,Omaha,Active,11,2026-05-30T08:34:13
+118,DRV00118,Susan,Anderson,2019-07-17,,Columbus,Active,8,2026-05-30T08:34:13
+119,DRV00119,Jennifer,Wilson,2014-04-29,,Oklahoma City,Active,6,2026-05-30T08:34:13
+120,DRV00120,Jessica,Johnson,2018-05-14,,Philadelphia,Active,10,2026-05-30T08:34:13
+121,DRV00121,Mary,Miller,2012-07-20,,Las Vegas,Active,11,2026-05-30T08:34:13
+122,DRV00122,James,Wilson,2013-05-21,,Minneapolis,Active,12,2026-05-30T08:34:13
+123,DRV00123,Michael,Gonzalez,2013-04-20,,Houston,Active,5,2026-05-30T08:34:13
+124,DRV00124,Thomas,Jackson,2021-05-17,,Las Vegas,Active,2,2026-05-30T08:34:13
+125,DRV00125,David,Smith,2019-06-08,,Seattle,Active,17,2026-05-30T08:34:13
+126,DRV00126,Sarah,Jackson,2012-10-14,,Minneapolis,Active,25,2026-05-30T08:34:13
+127,DRV00127,Thomas,Gonzalez,2021-08-23,,Portland,Active,15,2026-05-30T08:34:13
+128,DRV00128,John,Thomas,2012-12-22,,Las Vegas,Active,7,2026-05-30T08:34:13
+129,DRV00129,Michael,Smith,2018-06-19,,Oklahoma City,Active,6,2026-05-30T08:34:13
+130,DRV00130,Karen,Lopez,2017-07-03,,Los Angeles,Active,14,2026-05-30T08:34:13
+131,DRV00131,Linda,Martinez,2019-01-01,2021-02-17,Seattle,Terminated,19,2026-05-30T08:34:13
+132,DRV00132,Patricia,Gonzalez,2021-04-05,,Las Vegas,Active,24,2026-05-30T08:34:13
+133,DRV00133,Mary,Wilson,2019-08-21,,Seattle,Active,9,2026-05-30T08:34:13
+134,DRV00134,Linda,Moore,2015-08-23,,Nashville,Active,18,2026-05-30T08:34:13
+135,DRV00135,Karen,Moore,2012-03-05,2014-02-03,Miami,Terminated,19,2026-05-30T08:34:13
+136,DRV00136,Susan,Martin,2013-12-14,2014-12-19,Denver,Terminated,23,2026-05-30T08:34:13
+137,DRV00137,Michael,Davis,2018-06-23,2019-02-27,New York,Terminated,13,2026-05-30T08:34:13
+138,DRV00138,Jennifer,Thomas,2019-08-15,,Nashville,Active,4,2026-05-30T08:34:13
+139,DRV00139,Sarah,Davis,2014-08-27,,Charlotte,Active,14,2026-05-30T08:34:13
+140,DRV00140,Richard,Rodriguez,2016-05-28,2018-06-30,Dallas,Terminated,25,2026-05-30T08:34:13
+141,DRV00141,Thomas,Wilson,2017-07-26,,Dallas,Active,3,2026-05-30T08:34:13
+142,DRV00142,John,Thomas,2012-01-31,,Dallas,Active,15,2026-05-30T08:34:13
+143,DRV00143,Linda,Smith,2014-10-17,,Dallas,Active,2,2026-05-30T08:34:13
+144,DRV00144,James,Gonzalez,2016-11-09,,Las Vegas,Active,16,2026-05-30T08:34:13
+145,DRV00145,Susan,Hernandez,2020-05-26,,Los Angeles,Active,4,2026-05-30T08:34:13
+146,DRV00146,Jessica,Gonzalez,2019-01-13,,Oklahoma City,Active,12,2026-05-30T08:34:13
+147,DRV00147,Richard,Garcia,2020-06-09,,Oklahoma City,Active,20,2026-05-30T08:34:13
+148,DRV00148,Patricia,Anderson,2019-03-28,,Denver,Active,15,2026-05-30T08:34:13
+149,DRV00149,Linda,Jones,2013-08-25,,New York,Active,20,2026-05-30T08:34:13
+150,DRV00150,Robert,Martin,2015-09-16,,Columbus,Active,14,2026-05-30T08:34:13
+151,UNKNOWN,Unknown,Unknown,,,Unknown,Unknown,0,2026-05-30T08:34:13

@@ -1,0 +1,41 @@
+Table,Dimension,Score,Issues,Status,Details
+drivers,Completeness,1.0,0,🟢,Missing per column: {}
+drivers,Uniqueness,1.0,0,🟢,Duplicate rows on ['driver_id']: 0
+drivers,Validity,1.0,0,🟢,hire_date: 0 invalid | termination_date: 0 invalid | years_experience: 0 invalid | employment_status: 0 invalid
+drivers,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+trucks,Completeness,1.0,0,🟢,Missing per column: {}
+trucks,Uniqueness,1.0,0,🟢,Duplicate rows on ['truck_id']: 0
+trucks,Validity,1.0,0,🟢,model_year: 0 invalid | status: 0 invalid
+trucks,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+trailers,Completeness,1.0,0,🟢,Missing per column: {}
+trailers,Uniqueness,1.0,0,🟢,Duplicate rows on ['trailer_id']: 0
+trailers,Validity,1.0,0,🟢,trailer_type: 0 invalid | status: 0 invalid
+trailers,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+customers,Completeness,1.0,0,🟢,Missing per column: {}
+customers,Uniqueness,1.0,0,🟢,Duplicate rows on ['customer_id']: 0
+customers,Validity,1.0,0,🟢,account_status: 0 invalid | customer_type: 0 invalid | primary_freight_type: 0 invalid
+customers,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+facilities,Completeness,1.0,0,🟢,Missing per column: {}
+facilities,Uniqueness,1.0,0,🟢,Duplicate rows on ['facility_id']: 0
+facilities,Validity,1.0,0,🟢,facility_type: 0 invalid | latitude: 0 invalid | longitude: 0 invalid
+facilities,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+routes,Completeness,1.0,0,🟢,Missing per column: {}
+routes,Uniqueness,1.0,0,🟢,Duplicate rows on ['route_id']: 0
+routes,Validity,1.0,0,🟢,typical_distance_miles: 0 invalid | typical_transit_days: 0 invalid | base_rate_per_mile: 0 invalid | fuel_surcharge_rate: 0 invalid
+routes,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+loads,Completeness,1.0,0,🟢,Missing per column: {}
+loads,Uniqueness,1.0,0,🟢,Duplicate rows on ['load_id']: 0
+loads,Validity,1.0,0,🟢,load_type: 0 invalid | revenue: 0 invalid | fuel_surcharge: 0 invalid | accessorial_charges: 0 invalid | weight_lbs: 0 invalid | booking_type: 0 invalid | load_date: 0 invalid
+loads,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+trips,Completeness,0.9946,5066,🟢,"Missing per column: {'driver_id': 1714, 'truck_id': 1672, 'trailer_id': 1680}"
+trips,Uniqueness,1.0,0,🟢,Duplicate rows on ['trip_id']: 0
+trips,Validity,1.0,0,🟢,dispatch_date: 0 invalid | actual_distance_miles: 0 invalid | fuel_gallons_used: 0 invalid | actual_duration_hours: 0 invalid | average_mpg: 0 invalid | idle_time_hours: 0 invalid
+trips,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+delivery_events,Completeness,1.0,0,🟢,Missing per column: {}
+delivery_events,Uniqueness,1.0,0,🟢,Duplicate rows on ['event_id']: 0
+delivery_events,Validity,1.0,0,🟢,event_type: 0 invalid | scheduled_datetime: 0 invalid | actual_datetime: 0 invalid | detention_minutes: 0 invalid
+delivery_events,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
+fuel_purchases,Completeness,1.0,0,🟢,Missing per column: {}
+fuel_purchases,Uniqueness,1.0,0,🟢,Duplicate rows on ['fuel_purchase_id']: 0
+fuel_purchases,Validity,1.0,0,🟢,gallons: 0 invalid | price_per_gallon: 0 invalid | total_cost: 0 invalid
+fuel_purchases,Consistency,1.0,0,🟢,0 rows violate at least one consistency rule
